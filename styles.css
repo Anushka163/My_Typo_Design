@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background: #121212;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+.title {
+    font-size: 6rem;
+    letter-spacing: 8px;
+    background: linear-gradient(135deg, #6200ea, #ff6ec4);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: fadeIn 2s ease-in-out;
+    text-shadow: 5px 5px 30px rgba(255, 110, 196, 0.9);
+}
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #000428, #004e92);
+    z-index: -1;
+    animation: gradientMove 10s infinite alternate;
+}
+.geometric, .geometric-square {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+}
+.geometric {
+    top: 30%;
+    left: 20%;
+    background: #6200ea;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #6200ea;
+    animation: bounce 4s infinite ease-in-out;
+}
+.geometric-square {
+    bottom: 20%;
+    right: 15%;
+    background: #ff6ec4;
+    transform: rotate(45deg);
+    box-shadow: 0 0 30px #ff6ec4;
+    animation: spin 5s infinite linear;
+}
+.login-btn, .designs-btn {
+    background-color: #6200ea;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.8rem;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(98, 0, 234, 0.7);
+    margin: 0 10px;
+}
+.text-outline {
+    font-size: 4rem;
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+    text-align: center;
+    margin-top: 2rem;
+    text-shadow: 0 0 20px #fff;
+}
+.neon-text {
+    font-size: 3rem;
+    color: #ff6ec4;
+    text-shadow: 0 0 5px #ff6ec4, 0 0 10px #ff6ec4, 0 0 15px #ff6ec4;
+    margin-top: 2rem;
+}
+.design-features {
+    display: none;
+    margin-top: 3rem;
+}
+.three-d-text, .wave-text, .glitch-text, .gradient-flow, .blur-text {
+    font-size: 3rem;
+}
+.blur-text:hover {
+    filter: blur(0);
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes gradientMove { from { background-position: 0% 50%; } to { background-position: 100% 50%; } }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-40px); } }
+@keyframes spin { from { transform: rotate(0); } to { transform: rotate(360deg); } }
